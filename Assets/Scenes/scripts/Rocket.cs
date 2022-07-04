@@ -12,9 +12,14 @@ public class Rocket : MonoBehaviour
     [SerializeField] private float rotationSpeed;
     [SerializeField] private float movementSpeed;
     private bool isSceneChanging = false;
+
     [SerializeField] private ParticleSystem celebrationEffect;
     [SerializeField] private ParticleSystem deathEffect;
     [SerializeField] private ParticleSystem[] engineEffect = new ParticleSystem[3];
+
+    [SerializeField] private AudioClip celebrationSound;
+    [SerializeField] private AudioClip deathSound;
+    [SerializeField] private AudioClip engineSound;
 
     // Start is called before the first frame update
     void Start()
@@ -47,12 +52,22 @@ public class Rocket : MonoBehaviour
             case "Friendly":
                 break;
             case "Finish":
+                if (audioSource.isPlaying)
+                {
+                    audioSource.Stop();
+                }
                 celebrationEffect.Play();
+                audioSource.PlayOneShot(celebrationSound);
                 isSceneChanging = true;
                 Invoke(nameof(LoadNextLevel), 2f);
                 break;
             default:
+                if (audioSource.isPlaying)
+                {
+                    audioSource.Stop();
+                }
                 deathEffect.Play();
+                audioSource.PlayOneShot(deathSound);
                 isSceneChanging = true;
                 Invoke(nameof(KillRocket), 2f);
                 break;
@@ -89,7 +104,7 @@ public class Rocket : MonoBehaviour
             }
             if (!audioSource.isPlaying)
             {
-                audioSource.Play();
+                audioSource.PlayOneShot(engineSound);
             }
         }
         else

@@ -305,9 +305,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 2608083593957686527}
     m_Modifications:
     - target: {fileID: 1605968377, guid: f944f1b7b30b8ad4e9e44b106fcfacb2, type: 3}
+      propertyPath: deathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: bbc13fe1dc5d81d44943bca4bcce39de, type: 3}
+    - target: {fileID: 1605968377, guid: f944f1b7b30b8ad4e9e44b106fcfacb2, type: 3}
       propertyPath: deathEffect
       value: 
       objectReference: {fileID: 2307680674402835697}
+    - target: {fileID: 1605968377, guid: f944f1b7b30b8ad4e9e44b106fcfacb2, type: 3}
+      propertyPath: engineSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a6db204a3e1b1dd44b02374a88d3ffe5, type: 3}
+    - target: {fileID: 1605968377, guid: f944f1b7b30b8ad4e9e44b106fcfacb2, type: 3}
+      propertyPath: celebrationSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 5f7c0c55f84d29347ab66788c25813d6, type: 3}
     - target: {fileID: 1605968377, guid: f944f1b7b30b8ad4e9e44b106fcfacb2, type: 3}
       propertyPath: celebrationEffect
       value: 
@@ -324,6 +336,18 @@ PrefabInstance:
       propertyPath: engineEffect.Array.data[2]
       value: 
       objectReference: {fileID: 8186684699907213839}
+    - target: {fileID: 1605968379, guid: f944f1b7b30b8ad4e9e44b106fcfacb2, type: 3}
+      propertyPath: m_Pitch
+      value: 0.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605968379, guid: f944f1b7b30b8ad4e9e44b106fcfacb2, type: 3}
+      propertyPath: m_Volume
+      value: 0.164
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605968379, guid: f944f1b7b30b8ad4e9e44b106fcfacb2, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 353232307240701639, guid: f944f1b7b30b8ad4e9e44b106fcfacb2, type: 3}
       propertyPath: m_Name
       value: Rokect
