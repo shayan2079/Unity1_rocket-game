@@ -9,3 +9,5 @@ D = rotate right
 
 ## GOAL 
 Reach the landing pad without hitting obstacles
+
+## You can play this game at https://simmer.io/@shayan2079/rocket-game
